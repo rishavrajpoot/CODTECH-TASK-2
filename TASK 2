@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main(){
+  float celsius,kelvin,farhenhiet;
+  char ch;
+  printf("please choose the required degree:- \n");
+  printf("for celsius press 'c' \n");
+  printf("for farhenhiet press 'f' \n");
+  printf("for kelvin press 'k' \n");
+  printf("enter the degree :- ");
+  scanf("%c",&ch);
+switch (ch)
+{
+case 'c':
+    printf("enter the dgree in clecius :- ");
+    scanf("%f",&celsius);
+    farhenhiet = (celsius * 9/5) + 32;
+      kelvin = celsius + 273.15;
+    printf("enter the dgree in farheinheit :- %f\n",farhenhiet);
+    printf("enter the dgree in kelvin :-%f\n",kelvin);
+
+    break;
+case 'k':
+    printf("enter the dgree in kelvin :- ");
+    scanf("%f",&kelvin);
+    celsius = kelvin - 273.15;
+      farhenhiet = (celsius * 9/5) + 32;
+    printf("enter the dgree in farheinheit :- %f\n",farhenhiet);
+    printf("enter the dgree in kelvin :- %f\n",celsius);
+
+    break;
+case 'f':
+    printf("enter the dgree in kelvin :- ");
+    scanf("%f",&farhenhiet);
+    celsius = (farhenhiet - 32) * 5/9;
+      kelvin = (farhenhiet - 32) * 5/9 + 273.15;
+    printf("enter the dgree in kelvin :- %f\n",kelvin);
+    printf("enter the dgree in celsius :- %f\n",celsius);
+
+    break;
+
+
+default:
+    break;
+}
+
+  return 0;
+}
